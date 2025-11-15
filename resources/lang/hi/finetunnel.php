@@ -1,0 +1,33 @@
+<?php
+
+return [
+    'please_set_open_ai_api_key'            => 'कृपया पहले OpenAI API कुंजी सेट करें',
+    'success_upload_fine_tunnel'            => 'एआई प्रशिक्षण डेटा सफलतापूर्वक अपलोड किया गया',
+    'dataset'                               => 'डेटासेट',
+    'status'                                => 'डेटासेट की स्थिति',
+    'file_name'                             => 'OpenAI में फ़ाइल नाम',
+    'before_upload'                         => 'अभी तक अपलोड नहीं हुआ',
+    'on_process'                            => 'प्रक्रिया में',
+    'success'                               => 'सफल',
+    'error'                                 => 'त्रुटि',
+    'update'                                => 'प्रशिक्षण संपादित करें',
+    'delete'                                => 'प्रशिक्षण हटाएं',
+    'upload'                                => 'प्रशिक्षण अपलोड करें',
+    'download_dataset'                      => 'डेटासेट डाउनलोड करें',
+    'training_name'                         => 'प्रशिक्षण का नाम या शीर्षक दर्ज करें',
+    'training_description'                  => 'प्रशिक्षण का विवरण दर्ज करें',
+    'tarining_dataset'                      => 'प्रशिक्षण डेटासेट',
+    'add_dataset'                           => 'डेटासेट जोड़ें',
+    'question'                              => 'आदेश या प्रश्न',
+    'answer'                                => 'उत्तर',
+    'back_to'                               => 'एआई प्रशिक्षण सूची पर वापस जाएं',
+    'method'                                => 'प्रशिक्षण विधि',
+    'text'                                  => 'पाठ विवरण',
+    'from_url'                              => 'वेबसाइट URL से',
+    'from_file'                             => 'Word फ़ाइल से',
+    'upload_file'                           => 'फ़ाइल अपलोड करें',
+    'insert_web_url'                        => 'वेबसाइट URL दर्ज करें',
+    'use_audi_message'                      => 'ऑडियो संदेश का उपयोग करें',
+    'min_character'                         => 'ऑडियो संदेश के लिए न्यूनतम अक्षर',
+
+];

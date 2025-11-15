@@ -1,0 +1,33 @@
+<?php
+
+return [
+    'please_set_open_ai_api_key'            => 'Por favor, configure primero la clave API de OpenAI',
+    'success_upload_fine_tunnel'            => 'Datos de entrenamiento de IA subidos con éxito',
+    'dataset'                               => 'Conjunto de datos',
+    'status'                                => 'Estado del conjunto de datos',
+    'file_name'                             => 'Nombre del archivo en OpenAI',
+    'before_upload'                         => 'No subido aún',
+    'on_process'                            => 'En proceso',
+    'success'                               => 'Éxito',
+    'error'                                 => 'Error',
+    'update'                                => 'Editar entrenamiento',
+    'delete'                                => 'Eliminar entrenamiento',
+    'upload'                                => 'Subir entrenamiento',
+    'download_dataset'                      => 'Descargar conjunto de datos',
+    'training_name'                         => 'Introduzca el nombre o título del entrenamiento',
+    'training_description'                  => 'Introduzca la descripción del entrenamiento',
+    'tarining_dataset'                      => 'Conjunto de datos de entrenamiento',
+    'add_dataset'                           => 'Agregar conjunto de datos',
+    'question'                              => 'Comando o pregunta',
+    'answer'                                => 'Respuesta',
+    'back_to'                               => 'Volver a la lista de entrenamientos de IA',
+    'method'                                => 'Método de entrenamiento',
+    'text'                                  => 'Descripción del texto',
+    'from_url'                              => 'Desde URL del sitio web',
+    'from_file'                             => 'Desde archivo Word',
+    'upload_file'                           => 'Subir archivo',
+    'insert_web_url'                        => 'Introducir URL del sitio web',
+    'use_audi_message'                      => 'Usar mensajes de audio',
+    'min_character'                         => 'Caracteres mínimos para mensajes de audio',
+
+];

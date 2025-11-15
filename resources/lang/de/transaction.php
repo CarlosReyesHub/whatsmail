@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'received_payment'          => 'Zahlung erfolgreich erhalten',
+    'rejected_payment'          => 'Zahlung wurde abgelehnt und gelöscht',
+    'start_date'                => 'Startdatum',
+    'end_date'                  => 'Enddatum',
+    'from_company'              => 'Von Unternehmen',
+    'create_date'               => 'Erstellungsdatum',
+    'payment_date'              => 'Zahlungsdatum',
+    'status'                    => 'Transaktionsstatus',
+    'payments'                  => 'Eingehende Zahlungen',
+    'from_bank'                 => 'Von der Bank',
+    'to_bank'                   => 'Überweisung zur Bank',
+    'bank_sending'              => 'Absender-Kontonummer',
+    'amount_payment'            => 'Zahlungsbetrag',
+    'proof_deliver'             => 'Zustellnachweis',
+    'download_proof'            => 'Zahlungsbeleg herunterladen',
+    'approve_payment'           => 'Zahlung akzeptieren',
+    'reject_payment'            => 'Zahlung ablehnen',
+    'warning_action'            => 'Nachdem Sie diese Zustimmung erteilt haben, können Sie diese nicht mehr rückgängig machen',
+    'monthly_earning'           => 'Monatliches Einkommen',
+    'monthly_transaction'       => 'Monatliche Transaktionen',
+    'contact_total'             => 'Gesamtzahl der Kontakte',
+    'must_follow_up_customer'   => 'Kunden, die nachverfolgt werden müssen',
+    'back_to'                   => 'Zurück zur Transaktionsliste'
+];

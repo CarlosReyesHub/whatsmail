@@ -1,0 +1,23 @@
+# nixpacks.toml
+
+[phases.setup]
+# Lista de paquetes Nix a instalar.
+nixPkgs = [
+    "php82",
+    "php82Packages.composer",
+    "nodejs",
+    "php82Extensions.openssl",
+    "php82Extensions.fileinfo",
+    "php82Extensions.pdo_mysql",
+    "php82Extensions.mbstring",
+    "php82Extensions.curl",
+    "php82Extensions.intl"
+]
+
+[phases.build]
+# Comandos para instalar las dependencias y construir los assets.
+cmds = [
+    'composer install --ignore-platform-reqs --no-dev --optimize-autoloader',
+    'nix-shell --run "npm install --legacy-peer-deps",
+    'nix-shell --run "npm run build"
+]

@@ -2,7 +2,6 @@
 
 [phases.setup]
 # Lista de paquetes Nix a instalar.
-# Añadimos 'nodejs' para que 'npm' esté disponible y se puedan compilar los assets.
 nixPkgs = [
     "php82",
     "php82Packages.composer",
@@ -16,6 +15,12 @@ nixPkgs = [
 ]
 
 [phases.build]
-# Comando para instalar las dependencias de PHP en producción.
-# Nixpacks ejecutará 'npm install' y 'npm run build' automáticamente si es necesario.
-cmds = ['composer install --ignore-platform-reqs --no-dev --optimize-autoloader']
+# Comandos para instalar las dependencias y construir los assets.
+# 1. Instalamos dependencias de PHP.
+# 2. Instalamos dependencias de Node.js con --legacy-peer-deps para resolver conflictos.
+# 3. Ejecutamos el script de build de Node.js (ej: npm run build).
+cmds = [
+    'composer install --ignore-platform-reqs --no-dev --optimize-autoloader',
+    'npm install --legacy-peer-deps',
+    'npm run build'
+]

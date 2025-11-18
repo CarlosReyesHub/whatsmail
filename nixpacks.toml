@@ -1,0 +1,25 @@
+# nixpacks.toml
+
+[phases.setup]
+# Nixpacks usa paquetes de Nix. Aquí especificamos la versión de PHP y las extensiones.
+# Forzamos PHP 8.2 y añadimos las extensiones requeridas por WhatsMail.
+nixPkgs = [
+    "php82",
+    "php82Extensions.composer",
+    "php82Extensions.openssl",
+    "php82Extensions.fileinfo",
+    "php82Extensions.pdo_mysql",
+    "php82Extensions.mbstring",
+    "php82Extensions.json",
+    "php82Extensions.curl",
+    "php82Extensions.intl"
+]
+
+[phases.build]
+# Durante la fase de construcción, usamos el php que acabamos de instalar.
+# El flag --ignore-platform-reqs ya lo añade Coolify, pero no está de más.
+cmds = ['composer install --ignore-platform-reqs --no-dev --optimize-autoloader']
+
+[start]
+# Comando para iniciar tu aplicación Laravel.
+cmd = 'php artisan serve --host=0.0.0.0 --port=${PORT:-8000}'

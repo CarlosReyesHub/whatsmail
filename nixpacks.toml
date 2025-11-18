@@ -1,11 +1,10 @@
 # nixpacks.toml
 
 [phases.setup]
-# Lista de paquetes Nix a instalar.
-# 'composer' es un paquete independiente, no una extensión de php.
+# Usamos la agrupación correcta para Nix: php82Packages para Composer.
 nixPkgs = [
     "php82",
-    "composer",
+    "php82Packages.composer",
     "php82Extensions.openssl",
     "php82Extensions.fileinfo",
     "php82Extensions.pdo_mysql",
@@ -16,10 +15,5 @@ nixPkgs = [
 ]
 
 [phases.build]
-# Comando para instalar las dependencias de PHP.
-# Añadimos --no-dev para un entorno de producción más limpio y seguro.
+# Comando para instalar las dependencias de PHP en producción.
 cmds = ['composer install --ignore-platform-reqs --no-dev --optimize-autoloader']
-
-# NO es necesario definir la fase [start].
-# Nixpacks es lo suficientemente inteligente como para detectar Laravel
-# y configurar un servidor web (como Caddy) automáticamente.

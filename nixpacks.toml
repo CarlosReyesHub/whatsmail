@@ -16,8 +16,14 @@ nixPkgs = [
 
 [phases.build]
 # Comandos para instalar las dependencias y construir los assets.
+# 1. Forzamos la invalidación del caché de Docker para evitar conflictos de dependencias de npm.
+# 2. Instalamos las dependencias de PHP.
+# 3. Borramos artefactos viejos de npm y reinstalamos desde cero.
+# 4. Instalamos las dependencias de Node.js forzando la resolución de conflictos.
+# 5. Ejecutamos el script de build de Node.js.
 cmds = [
-    'echo "Forzando la invalidación del caché y resolviendo dependencias de Node.js...',
-    'composer install --ignore-platform-reqs --no-dev --optimize-autoloader',
-    'npm install --force --legacy-peer-deps'
+    'echo "Forzando la invalidación del caché de Docker y resolviendo dependencias de Node.js...",
+    'rm -rf node_modules/ package-lock.json',
+    'npm install --force --legacy-peer-deps',
+    'npm run build'
 ]

@@ -15,7 +15,7 @@ nixPkgs = [
 
 [phases.build]
 cmds = [
-    'composer install --ignore-platform-reqs --no-dev --optimize-autoloader',
-    'nix-shell --run "npm install --force --legacy-peer-deps"',
-    'nix-shell --run "npm run build"
+    "composer install --ignore-platform-reqs --no-dev --optimize-autoloader",
+    "nix-shell --run \"npm install --force --legacy-peer-deps\"",
+    "nix-shell --run \"npm run build\""
 ]

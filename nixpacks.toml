@@ -2,10 +2,11 @@
 
 [phases.setup]
 # Lista de paquetes Nix a instalar.
-# NOTA: La extensión 'json' viene incluida por defecto en PHP 8+ y no se debe especificar.
+# Añadimos 'nodejs' para que 'npm' esté disponible y se puedan compilar los assets.
 nixPkgs = [
     "php82",
     "php82Packages.composer",
+    "nodejs",
     "php82Extensions.openssl",
     "php82Extensions.fileinfo",
     "php82Extensions.pdo_mysql",
@@ -16,4 +17,5 @@ nixPkgs = [
 
 [phases.build]
 # Comando para instalar las dependencias de PHP en producción.
+# Nixpacks ejecutará 'npm install' y 'npm run build' automáticamente si es necesario.
 cmds = ['composer install --ignore-platform-reqs --no-dev --optimize-autoloader']

@@ -1,7 +1,8 @@
 # nixpacks.toml
 
 [phases.setup]
-# Usamos la agrupación correcta para Nix: php82Packages para Composer.
+# Lista de paquetes Nix a instalar.
+# NOTA: La extensión 'json' viene incluida por defecto en PHP 8+ y no se debe especificar.
 nixPkgs = [
     "php82",
     "php82Packages.composer",
@@ -9,7 +10,6 @@ nixPkgs = [
     "php82Extensions.fileinfo",
     "php82Extensions.pdo_mysql",
     "php82Extensions.mbstring",
-    "php82Extensions.json",
     "php82Extensions.curl",
     "php82Extensions.intl"
 ]
